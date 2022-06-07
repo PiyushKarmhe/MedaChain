@@ -21,4 +21,5 @@ Some of the benefits of this system:-
 > Ganache to create a local block-chain network for testing.
 
 Video Link:- [https://github.com/PiyushKarmhe/MedaChain](https://drive.google.com/file/d/1XCoEQCuR9NxVyQhVwU6FUA0adx9zjXqI/view)
-WebSIte Link:- https://piyushkarmhe.github.io/MedaChain/
+
+WebSite Link:- https://piyushkarmhe.github.io/MedaChain/
