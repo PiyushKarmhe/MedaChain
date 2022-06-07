@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Patient - MedaChain</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand logo" href="#">MedaChain</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Log Out</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page login-page">
+      <section class="clean-block clean-form dark">
+        <div
+          class="container"
+          style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          "
+        >
+          <div class="block-heading">
+            <h2 class="text-info">Patient Portal</h2>
+            <p>Now you can check all you records in just a few taps.</p>
+          </div>
+          <div
+            style="
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              gap: 20px;
+              width: 60vw;
+              margin: 20px;
+            "
+          >
+            <div>
+              <p class="btn btn-primary mx-3" id="submit" href="">Check</p>
+              <p class="btn btn-primary mx-3" id="load" href="">Load</p>
+            </div>
+            <div
+              id="carouselExampleFade"
+              class="carousel slide carousel-fade"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://images.unsplash.com/photo-1653749576886-059215c7a777?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1653819155995-989f24c8cf60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1652869122685-c7792ef56ee2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1591152195629-f814373d9920?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80"
+                    class="d-block w-100"
+                    alt="..."
+                  />
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleFade"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started</h5>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sign up</a></li>
+              <li><a href="#">Downloads</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#">Company Information</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Support</h5>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help desk</a></li>
+              <li><a href="#">Forums</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Legal</h5>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Copyright MedaChain</p>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/patient.js"></script>
+  </body>
+</html>

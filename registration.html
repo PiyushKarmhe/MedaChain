@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Register - MedaChain</title>
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,400i,700,700i,600,600i&amp;display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/vanilla-zoom.min.css" />
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .dropdown-menu {
+        margin-top: 0;
+      }
+    </style>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <nav
+      class="navbar navbar-light navbar-expand-lg fixed-top bg-white clean-navbar"
+    >
+      <div class="container">
+        <a class="navbar-brand logo" href="#">MedaChain</a
+        ><button
+          data-bs-toggle="collapse"
+          class="navbar-toggler"
+          data-bs-target="#navcol-1"
+        >
+          <span class="visually-hidden">Toggle navigation</span
+          ><span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about-us.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact-us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main class="page registration-page">
+      <section class="clean-block clean-form dark">
+        <div class="container">
+          <div class="block-heading">
+            <h2 class="text-info">Registration</h2>
+            <p>
+              Not yet Registered? choose your profile and register with us to
+              open a world of endless opportunities.
+            </p>
+          </div>
+          <ul
+            style="
+              display: flex;
+              justify-content: space-evenly;
+              align-items: center;
+              width: 70%;
+              margin: 10px auto;
+            "
+          >
+            <button class="btn btn-primary" id="doctor" type="submit">
+              Doctor
+            </button>
+            <button class="btn btn-primary" id="patient" type="submit">
+              Patient
+            </button>
+            <button class="btn btn-primary" id="agent" type="submit">
+              Agent
+            </button>
+          </ul>
+          <form>
+            <div class="Doctor" id="Doctor" style="display: none">
+              <div class="mb-3">
+                <label class="form-label" for="Doctor-name">Name</label
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Doctor-name"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Doctor-age">Age</label
+                ><input class="form-control item" type="text" id="Doctor-age" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Doctor-dep">Department</label
+                ><input class="form-control item" type="text" id="Doctor-dep" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Doctor-pos">Position</label
+                ><input class="form-control item" type="text" id="Doctor-pos" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Doctor-sex">Sex</label
+                ><input class="form-control item" type="text" id="Doctor-sex" />
+              </div>
+            </div>
+            <div class="Patient" id="Patient" style="display: none">
+              <div class="mb-3">
+                <label class="form-label" for="Patient-name">Name</label
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Patient-name"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Patient-age">Age</label
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Patient-age"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Patient-dob">Date of Birth</label
+                ><input
+                  class="form-control item"
+                  type="date"
+                  id="Patient-dob"
+                />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Patient-sex">Sex</label
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Patient-sex"
+                />
+              </div>
+            </div>
+            <div class="Agent" id="Agent" style="display: none">
+              <div class="mb-3">
+                <label class="form-label" for="Agent-name">Name</label
+                ><input class="form-control item" type="text" id="Agent-name" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Agent-age">Age</label
+                ><input class="form-control item" type="text" id="Agent-age" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Agent-sex">Sex</label
+                ><input class="form-control item" type="text" id="Agent-sex" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Agent-loc">Location</label
+                ><input class="form-control item" type="text" id="Agent-loc" />
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="Agent-agency">Agency Name</label
+                ><input
+                  class="form-control item"
+                  type="text"
+                  id="Agent-agency"
+                />
+              </div>
+            </div>
+            <p class="btn btn-primary" id="submit" type="submit">Sign Up</p>
+          </form>
+        </div>
+      </section>
+    </main>
+    <footer class="page-footer dark">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-3">
+            <h5>Get started</h5>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sign up</a></li>
+              <li><a href="#">Downloads</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>About us</h5>
+            <ul>
+              <li><a href="#">Company Information</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Support</h5>
+            <ul>
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Help desk</a></li>
+              <li><a href="#">Forums</a></li>
+            </ul>
+          </div>
+          <div class="col-sm-3">
+            <h5>Legal</h5>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Terms of Use</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <p>© 2022 Copyright Text</p>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="assets/js/vanilla-zoom.js"></script>
+    <script src="assets/js/theme.js"></script>
+    <script src="assets/js/global.js"></script>
+    <script src="assets/js/register.js"></script>
+  </body>
+</html>
